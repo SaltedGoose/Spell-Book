@@ -1,0 +1,154 @@
+[
+    {
+        "id": "acid-splash",
+        "name" : "Acid Splash",
+
+        "school": "Evocation",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "60 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "You create an acidic bubble at a point within range, where it explodes in a 5-foot-radius Sphere.",
+            "Each creature in that Sphere must succeed on a Dexterity saving throw or take 1d6 Acid damage."
+        ],
+
+        "higherLevels": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6).",
+
+        "effects": {
+            "damage": {
+            "dice": {
+                "1" : "1d6",
+                "5" : "2d6",
+                "11" : "3d6",
+                "17" : "4d6"
+            },
+            "type": "Acid"
+            },
+            "toHitThrow" : "",
+            "savingThrow": "Dexterity DC 15",
+            "areaOfEffect": {
+            "shape": "Sphere",
+            "size": "5 feet"
+            }
+        },
+
+        "image": ""
+    },
+    {
+        "id": "blade-ward",
+        "name" : "Blade Ward",
+
+        "school": "Abjuration",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "Self",
+            "type": "Self"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "1min",
+            "concentration": true
+        },
+
+        "ritual": false,
+
+        "description": [
+            "Whenever a creature makes an attack roll against you before the spell ends,",
+            "the attacker subtracts 1d4 from the attack roll."
+        ],
+
+        "higherLevels": "",
+
+        "effects": "",
+
+        "image": ""
+    },
+    {
+        "id": "chill-touch",
+        "name" : "Chill Touch",
+
+        "school": "Necromancy",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "",
+            "type": "touch"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "Channeling the chill of the grave, make a melee spell attack against a target within reach.",
+            "On a hit, the target takes 1d10 Necrotic damage, and it can’t regain Hit Points until the end of your next turn."
+        ],
+
+        "higherLevels": "The damage increases by 1d10 when you reach levels 5 (2d10), 11 (3d10), and 17 (4d10).",
+
+        "effects": {
+            "damage": {
+            "dice": {
+                "1" : "1d10",
+                "5" : "2d10",
+                "11" : "3d10",
+                "17" : "4d10"
+            },
+            "type": "Necrotic"
+            },
+            "toHitThrow" : "+7",
+            "savingThrow": "Dexterity DC 15",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    }
+]

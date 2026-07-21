@@ -1,0 +1,143 @@
+body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+h1{
+    margin: 0;
+}
+
+p{
+    font-size: 35px;
+    color: black;
+    text-shadow: 0 2px white;
+    margin: 5px 0px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+#app{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#spell-book-heading{
+    font-size: 45px;
+    padding-top: 120px;
+    color: black;
+    text-shadow: 0 4px white;
+    width: 50%;
+}
+
+#spell-book-sub-heading{
+    font-size: 35px;
+    color: black;
+    text-shadow: 0 2px white;
+    width: 50%;
+    margin-bottom: 0;
+}
+
+#background-image{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#level-list, #spell-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding-top: 50px;
+    gap: 30px
+}
+
+#level-list button, #spell-list button{
+    font-size: 35px;
+    color: black;
+    text-shadow: 0 2px white;
+    background: none;
+    border: none;
+}
+
+#spell-list button{
+    font-size: 45px;
+}
+
+#spell-details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 80%;
+    height: 70%;
+    border: 2px solid red;
+}
+
+#description-div{
+    grid-column: span 2;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#description-div-text{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+#image-div{
+    width: 40%;
+}
+
+@font-face {
+  font-family: "StandardGalacticAlphabet-Regular";
+  src: url("fonts/StandardGalacticAlphabet-Regular.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Tangerine-Regular";
+    src: url("fonts/Tangerine-Regular.ttf") format("truetype")
+}
+
+@font-face{
+    font-family: "CinzelDecorative-Regular";
+    src: url("fonts/CinzelDecorative-Regular.ttf") format("truetype")
+}
+
+
+.enchanting-text {
+  font-family: "StandardGalacticAlphabet-Regular", sans-serif;
+}
+
+.fantasy-text-normal {
+    font-family: "Tangerine-Regular", sans-serif;
+}
+
+.fantasy-text-heading {
+    font-family: "CinzelDecorative-Regular", sans-serif;
+}
+
+.spell-detail-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+}
