@@ -1,7 +1,7 @@
 [
     {
         "id": "acid-splash",
-        "name" : "Acid Splash",
+        "name": "Acid Splash",
 
         "school": "Evocation",
 
@@ -30,35 +30,36 @@
         "ritual": false,
 
         "description": [
-            "You create an acidic bubble at a point within range, where it explodes in a 5-foot-radius Sphere.",
-            "Each creature in that Sphere must succeed on a Dexterity saving throw or take 1d6 Acid damage."
+            "A sphere of corrosive emerald energy gathers like a drop of poison drawn from the heart of an ancient storm.",
+            "For a fleeting moment it hangs perfectly still, before bursting outward in a violent shower that hisses against everything caught within it."
         ],
 
         "higherLevels": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6).",
 
         "effects": {
             "damage": {
-            "dice": {
-                "1" : "1d6",
-                "5" : "2d6",
-                "11" : "3d6",
-                "17" : "4d6"
+                "dice": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                },
+                "type": "Acid"
             },
-            "type": "Acid"
-            },
-            "toHitThrow" : "",
-            "savingThrow": "Dexterity DC 15",
+            "toHitThrow": "",
+            "savingThrow": "Dexterity",
             "areaOfEffect": {
-            "shape": "Sphere",
-            "size": "5 feet"
+                "shape": "Sphere",
+                "size": "5 feet"
             }
         },
 
         "image": ""
     },
+
     {
         "id": "blade-ward",
-        "name" : "Blade Ward",
+        "name": "Blade Ward",
 
         "school": "Abjuration",
 
@@ -80,26 +81,35 @@
         },
 
         "duration": {
-            "value": "1min",
+            "value": "1 minute",
             "concentration": true
         },
 
         "ritual": false,
 
         "description": [
-            "Whenever a creature makes an attack roll against you before the spell ends,",
-            "the attacker subtracts 1d4 from the attack roll."
+            "A veil of unseen force settles around the body, like the stillness found in the eye of a raging tempest.",
+            "Blades seem to lose their purpose as they approach, their paths disturbed by an invisible current of arcane power."
         ],
 
         "higherLevels": "",
 
-        "effects": "",
+        "effects": {
+            "damage": {
+                "dice": {},
+                "type": ""
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
 
         "image": ""
     },
+
     {
         "id": "chill-touch",
-        "name" : "Chill Touch",
+        "name": "Chill Touch",
 
         "school": "Necromancy",
 
@@ -109,8 +119,8 @@
         },
 
         "range": {
-            "value": "",
-            "type": "touch"
+            "value": "Touch",
+            "type": "Touch"
         },
 
         "components": {
@@ -128,24 +138,1285 @@
         "ritual": false,
 
         "description": [
-            "Channeling the chill of the grave, make a melee spell attack against a target within reach.",
-            "On a hit, the target takes 1d10 Necrotic damage, and it can’t regain Hit Points until the end of your next turn."
+            "The air grows cold as the whisper of the grave slips into the world of the living.",
+            "A spectral hand emerges from the darkness, its fingers pale with the frost of forgotten tombs."
         ],
 
         "higherLevels": "The damage increases by 1d10 when you reach levels 5 (2d10), 11 (3d10), and 17 (4d10).",
 
         "effects": {
             "damage": {
-            "dice": {
-                "1" : "1d10",
-                "5" : "2d10",
-                "11" : "3d10",
-                "17" : "4d10"
+                "dice": {
+                    "1": "1d10",
+                    "5": "2d10",
+                    "11": "3d10",
+                    "17": "4d10"
+                },
+                "type": "Necrotic"
             },
-            "type": "Necrotic"
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "control-flames",
+        "name": "Control Flames",
+
+        "school": "Transmutation",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "60 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "Fire bends beneath an unseen will, its flames twisting and dancing as though caught within a miniature tempest.",
+            "Colours shift, shadows lengthen, and shapes briefly emerge from the living flame before dissolving back into the fire."
+        ],
+
+        "higherLevels": "",
+
+        "effects": {
+            "damage": {
+                "dice": {},
+                "type": ""
             },
-            "toHitThrow" : "+7",
-            "savingThrow": "Dexterity DC 15",
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "create-bonfire",
+        "name": "Create Bonfire",
+
+        "school": "Conjuration",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "60 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Up to 1 minute",
+            "concentration": true
+        },
+
+        "ritual": false,
+
+        "description": [
+            "The ground erupts with a sudden bloom of elemental fire, burning with a strange intensity that seems almost alive.",
+            "Flames coil upward like the heart of a miniature inferno, casting restless shadows across everything nearby."
+        ],
+
+        "higherLevels": "The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).",
+
+        "effects": {
+            "damage": {
+                "dice": {
+                    "1": "1d8",
+                    "5": "2d8",
+                    "11": "3d8",
+                    "17": "4d8"
+                },
+                "type": "Fire"
+            },
+            "toHitThrow": "",
+            "savingThrow": "Dexterity",
+            "areaOfEffect": {
+                "shape": "Cube",
+                "size": "5 feet"
+            }
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "dancing-lights",
+        "name": "Dancing Lights",
+
+        "school": "Illusion",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "120 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": true,
+            "materialDescription": "A bit of phosphorus or wychwood, or a glowworm"
+        },
+
+        "duration": {
+            "value": "Up to 1 minute",
+            "concentration": true
+        },
+
+        "ritual": false,
+
+        "description": [
+            "Four distant lights awaken in the darkness, drifting like fragments of stars caught within an unseen current.",
+            "They move with the restless grace of fireflies riding the winds of an approaching storm."
+        ],
+
+        "higherLevels": "",
+
+        "effects": {
+            "damage": {
+                "dice": {},
+                "type": ""
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "elementalism",
+        "name": "Elementalism",
+
+        "school": "Transmutation",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "30 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "The four elements answer with a whisper: flame flickers, water trembles, earth shifts, and the wind begins to stir.",
+            "For a brief moment, the world remembers that stone, sea, flame, and sky are all bound to the same ancient force."
+        ],
+
+        "higherLevels": "",
+
+        "effects": {
+            "damage": {
+                "dice": {},
+                "type": ""
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "fire-bolt",
+        "name": "Fire Bolt",
+
+        "school": "Evocation",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "120 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "A fragment of primordial flame tears free from the air, burning with a brilliance far greater than any natural fire.",
+            "The blazing shard streaks across the battlefield like a fallen star before erupting against its target."
+        ],
+
+        "higherLevels": "The damage increases by 1d10 when you reach levels 5 (2d10), 11 (3d10), and 17 (4d10).",
+
+        "effects": {
+            "damage": {
+                "dice": {
+                    "1": "1d10",
+                    "5": "2d10",
+                    "11": "3d10",
+                    "17": "4d10"
+                },
+                "type": "Fire"
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "friends",
+        "name": "Friends",
+
+        "school": "Enchantment",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "10 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": false,
+            "somatic": true,
+            "material": true,
+            "materialDescription": "Some makeup"
+        },
+
+        "duration": {
+            "value": "Up to 1 minute",
+            "concentration": true
+        },
+
+        "ritual": false,
+
+        "description": [
+            "A subtle warmth settles upon the mind, quiet as the calm before a storm.",
+            "For a fleeting moment, suspicion gives way to familiarity, and the presence of the caster feels strangely comforting."
+        ],
+
+        "higherLevels": "",
+
+        "effects": {
+            "damage": {
+                "dice": {},
+                "type": ""
+            },
+            "toHitThrow": "",
+            "savingThrow": "Wisdom",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "frostbite",
+        "name": "Frostbite",
+
+        "school": "Evocation",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "60 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "A breath of winter sweeps across the battlefield, carrying the bitter cold of clouds gathered high above frozen peaks.",
+            "Ice blooms across flesh and armour as the victim feels the merciless touch of a storm that knows no warmth."
+        ],
+
+        "higherLevels": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6).",
+
+        "effects": {
+            "damage": {
+                "dice": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                },
+                "type": "Cold"
+            },
+            "toHitThrow": "",
+            "savingThrow": "Constitution",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "gust",
+        "name": "Gust",
+
+        "school": "Transmutation",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "30 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "The air suddenly answers with a sharp crack, as though an invisible storm has broken through the world.",
+            "A violent current tears across the ground, carrying dust, leaves, and anything unfortunate enough to stand against it."
+        ],
+
+        "higherLevels": "",
+
+        "effects": {
+            "damage": {
+                "dice": {},
+                "type": ""
+            },
+            "toHitThrow": "",
+            "savingThrow": "Strength",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "infestation",
+        "name": "Infestation",
+
+        "school": "Conjuration",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "30 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": true,
+            "materialDescription": "A living flea"
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "Something stirs where nothing should be, as a swarm of tiny, unnatural creatures spills from the unseen places between moments.",
+            "The air becomes alive with movement, crawling shadows and frantic chittering surrounding the unfortunate victim."
+        ],
+
+        "higherLevels": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6).",
+
+        "effects": {
+            "damage": {
+                "dice": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                },
+                "type": "Poison"
+            },
+            "toHitThrow": "",
+            "savingThrow": "Constitution",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "light",
+        "name": "Light",
+
+        "school": "Evocation",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "Touch",
+            "type": "Touch"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": true,
+            "materialDescription": "A firefly or phosphorescent moss"
+        },
+
+        "duration": {
+            "value": "1 hour",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "A pale radiance awakens like a captured fragment of lightning, banishing the darkness without heat or flame.",
+            "The enchanted object glows with the quiet brilliance of a distant star seen through the clouds."
+        ],
+
+        "higherLevels": "",
+
+        "effects": {
+            "damage": {
+                "dice": {},
+                "type": ""
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "mage-hand",
+        "name": "Mage Hand",
+
+        "school": "Conjuration",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "30 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "1 minute",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "A translucent hand forms from pale blue energy, its fingers trailing wisps of mist like clouds before a storm.",
+            "It hangs silently in the air, obedient and weightless, moving with the precision of an unseen current."
+        ],
+
+        "higherLevels": "",
+
+        "effects": {
+            "damage": {
+                "dice": {},
+                "type": ""
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "mending",
+        "name": "Mending",
+
+        "school": "Transmutation",
+
+        "castingTime": {
+            "value": "1 minute",
+            "type": "Minute"
+        },
+
+        "range": {
+            "value": "Touch",
+            "type": "Touch"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": true,
+            "materialDescription": "Two lodestones"
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "The fractured edges of an object shimmer with soft arcane light as though time itself has been briefly reversed.",
+            "Cracks disappear beneath threads of magic, leaving behind the quiet perfection of something made whole once more."
+        ],
+
+        "higherLevels": "",
+
+        "effects": {
+            "damage": {
+                "dice": {},
+                "type": ""
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "message",
+        "name": "Message",
+
+        "school": "Transmutation",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "120 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": true,
+            "materialDescription": "A copper wire"
+        },
+
+        "duration": {
+            "value": "1 round",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "A whisper slips silently into the air and rides upon an invisible current, crossing impossible distances without disturbing the world around it.",
+            "To everyone else there is only silence; to its intended recipient, the voice arrives as clearly as though spoken beside them."
+        ],
+
+        "higherLevels": "",
+
+        "effects": {
+            "damage": {
+                "dice": {},
+                "type": ""
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "mind-sliver",
+        "name": "Mind Sliver",
+
+        "school": "Enchantment",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "60 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "1 round",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "A needle of invisible thought pierces the mind, carrying with it the distant rumble of thunder from somewhere beyond reality.",
+            "For an instant, the victim's thoughts fracture beneath the pressure, leaving only confusion and the echo of a storm that cannot be seen."
+        ],
+
+        "higherLevels": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6).",
+
+        "effects": {
+            "damage": {
+                "dice": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                },
+                "type": "Psychic"
+            },
+            "toHitThrow": "",
+            "savingThrow": "Intelligence",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "minor-illusion",
+        "name": "Minor Illusion",
+
+        "school": "Illusion",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "30 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": false,
+            "somatic": true,
+            "material": true,
+            "materialDescription": "A bit of fleece"
+        },
+
+        "duration": {
+            "value": "1 minute",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "Reality flickers like lightning behind a cloud, and for a moment something impossible takes its place.",
+            "A sound without a source or an image without substance lingers in the world, convincing enough to make the boundary between illusion and truth uncertain."
+        ],
+
+        "higherLevels": "",
+
+        "effects": {
+            "damage": {
+                "dice": {},
+                "type": ""
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "mold-earth",
+        "name": "Mold Earth",
+
+        "school": "Transmutation",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "30 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "The earth stirs beneath an ancient command, its surface rippling as though it were no more solid than water.",
+            "Soil and stone shift with unnatural obedience, remembering for a moment that even the foundations of the world are subject to elemental will."
+        ],
+
+        "higherLevels": "",
+
+        "effects": {
+            "damage": {
+                "dice": {},
+                "type": ""
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "poison-spray",
+        "name": "Poison Spray",
+
+        "school": "Necromancy",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "30 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "A sickly vapour gathers in the air, carrying the bitter scent of decay and something far older than any mortal poison.",
+            "The cloud bursts forward in a violent breath, leaving the air tainted with the lingering touch of death."
+        ],
+
+        "higherLevels": "The damage increases by 1d12 when you reach levels 5 (2d12), 11 (3d12), and 17 (4d12).",
+
+        "effects": {
+            "damage": {
+                "dice": {
+                    "1": "1d12",
+                    "5": "2d12",
+                    "11": "3d12",
+                    "17": "4d12"
+                },
+                "type": "Poison"
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "prestidigitation",
+        "name": "Prestidigitation",
+
+        "school": "Transmutation",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "10 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Up to 1 hour",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "A flicker of arcane power dances between the fingers, leaving behind sparks, whispers, scents, colours, and fleeting fragments of impossible things.",
+            "The smallest movements of the hand become enough to make the mundane feel touched by something ancient and magical."
+        ],
+
+        "higherLevels": "",
+
+        "effects": {
+            "damage": {
+                "dice": {},
+                "type": ""
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "ray-of-frost",
+        "name": "Ray of Frost",
+
+        "school": "Evocation",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "60 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "A sliver of winter tears through the air, leaving a trail of crystalline frost in its wake.",
+            "The cold carries the silence of a frozen sky, stealing warmth from everything unfortunate enough to stand in its path."
+        ],
+
+        "higherLevels": "The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).",
+
+        "effects": {
+            "damage": {
+                "dice": {
+                    "1": "1d8",
+                    "5": "2d8",
+                    "11": "3d8",
+                    "17": "4d8"
+                },
+                "type": "Cold"
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "shape-water",
+        "name": "Shape Water",
+
+        "school": "Transmutation",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "30 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "Water rises as though answering the pull of the moon, curling and twisting into forms that should require no small amount of force.",
+            "For a brief moment, the element moves with the grace of a living thing, reflecting the restless nature of the storm."
+        ],
+
+        "higherLevels": "",
+
+        "effects": {
+            "damage": {
+                "dice": {},
+                "type": ""
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "shocking-grasp",
+        "name": "Shocking Grasp",
+
+        "school": "Evocation",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "Touch",
+            "type": "Touch"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "Lightning coils around the hand like a living serpent, crackling with the fury of a storm trapped beneath the skin.",
+            "Upon contact, the world seems to hold its breath before a violent surge tears through the target in a flash of blue-white light."
+        ],
+
+        "higherLevels": "The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).",
+
+        "effects": {
+            "damage": {
+                "dice": {
+                    "1": "1d8",
+                    "5": "2d8",
+                    "11": "3d8",
+                    "17": "4d8"
+                },
+                "type": "Lightning"
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "thunderclap",
+        "name": "Thunderclap",
+
+        "school": "Evocation",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "Self",
+            "type": "Self"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "The silence before the storm shatters in an instant.",
+            "A tremendous crack of thunder erupts from the caster, echoing like the voice of the heavens themselves."
+        ],
+
+        "higherLevels": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6).",
+
+        "effects": {
+            "damage": {
+                "dice": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                },
+                "type": "Thunder"
+            },
+            "toHitThrow": "",
+            "savingThrow": "Constitution",
+            "areaOfEffect": {
+                "shape": "Sphere",
+                "size": "5 feet"
+            }
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "toll-the-dead",
+        "name": "Toll the Dead",
+
+        "school": "Necromancy",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "60 feet",
+            "type": "Range"
+        },
+
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": false,
+            "materialDescription": ""
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "A bell tolls where no bell exists, its mournful voice rolling through the air like thunder across a dead valley.",
+            "With each echo, the boundary between the living and the forgotten grows thinner, and something unseen seems to answer from beyond the grave."
+        ],
+
+        "higherLevels": "The damage increases by 1 die when you reach levels 5, 11, and 17. The d8 becomes 2d8, 3d8, and 4d8, while the d12 becomes 2d12, 3d12, and 4d12.",
+
+        "effects": {
+            "damage": {
+                "dice": {
+                    "1": "1d8 / 1d12",
+                    "5": "2d8 / 2d12",
+                    "11": "3d8 / 3d12",
+                    "17": "4d8 / 4d12"
+                },
+                "type": "Necrotic"
+            },
+            "toHitThrow": "",
+            "savingThrow": "Wisdom",
+            "areaOfEffect": ""
+        },
+
+        "image": ""
+    },
+
+    {
+        "id": "true-strike",
+        "name": "True Strike",
+
+        "school": "Divination",
+
+        "castingTime": {
+            "value": "1 action",
+            "type": "Action"
+        },
+
+        "range": {
+            "value": "Self",
+            "type": "Self"
+        },
+
+        "components": {
+            "verbal": false,
+            "somatic": true,
+            "material": true,
+            "materialDescription": "A weapon with which you are proficient and that is worth 1+ CP"
+        },
+
+        "duration": {
+            "value": "Instantaneous",
+            "concentration": false
+        },
+
+        "ritual": false,
+
+        "description": [
+            "For a heartbeat, the world slows and every possible path becomes visible.",
+            "A thread of brilliant light traces the perfect course of the coming strike, revealing the single moment in which steel, magic, and fate align."
+        ],
+
+        "higherLevels": "The attack deals extra Radiant damage when you reach levels 5 (1d6), 11 (2d6), and 17 (3d6).",
+
+        "effects": {
+            "damage": {
+                "dice": {
+                    "1": "",
+                    "5": "1d6",
+                    "11": "2d6",
+                    "17": "3d6"
+                },
+                "type": "Radiant"
+            },
+            "toHitThrow": "",
+            "savingThrow": "",
             "areaOfEffect": ""
         },
 
